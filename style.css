@@ -1,0 +1,117 @@
+*{
+    background-color: white;
+    color: black;
+}
+@font-face {
+    font-family:"Days";
+    src: url('about_jayce_font/Days.woff') format('woff');}
+@font-face {
+    font-family:"GnuolaneRg-Regular";
+    src: url('./about_jayce_font/GnuolaneRg-Regular.woff') format('woff');}
+.header {
+    display: block;
+    padding: 5px 0px 5px 0px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 3px;
+}
+#logo{
+    display: inline;
+    text-decoration: none;
+    font-size: 30px;
+    font-family:'Days';
+    color: black;
+}
+.sns {
+    display: inline;
+    float: right;
+}
+#symbol {
+    padding-inline: 3px;
+    width: 30px;
+}
+div .nav_bar{
+    list-style: none;
+    display: block;
+    margin: 0px;
+    padding-bottom: 3px;
+    border-bottom: 3px solid black;
+    text-align: center;
+}
+div .nav_bar a{
+    text-decoration: none;
+    color: black;
+    font-family:'GnuolaneRg-Regular';
+    display: inline-block;
+
+    padding: 2px 10px 2px 10px;
+    margin: 0px 70px 0px 70px;
+    font-size: 23px;
+    position: relative;
+}
+div .nav_bar a.current{
+    background-color: black; color: white;
+}
+div .nav_bar a::after{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: all .3s ease-out;
+}
+div .nav_bar a:hover::after{
+    width: 60px;
+}
+.nav_bar_leftside{
+    display: inline;
+}
+.nav_bar_leftside ul{
+    list-style: none;
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+}
+.nav_bar_leftside li{
+    display: inline-block;
+    width: fit-content;
+    padding-bottom: 80%;
+    border-right: 1px solid black;
+}
+.nav_bar_leftside a{
+    text-decoration: none;
+    color: black;
+    font-family:'GnuolaneRg-Regular';
+    display: block;
+    width: 230px;
+    padding: 5px;
+    margin: 30px 10px 30px 10px;
+    font-size: 25px;
+    position: relative;
+}
+.nav_bar_leftside a.current{
+    background-color: black; color: white;
+}
+.nav_bar_leftside a::after{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 2%;
+    transform: translateX(0%);
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: all .3s ease-out;
+}
+.nav_bar_leftside a:hover::after{
+    width:40%;
+}
+.grid_text{
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.area_text{
+    margin: 30px;
+}
