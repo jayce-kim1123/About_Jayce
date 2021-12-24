@@ -14,7 +14,7 @@ body{
 @font-face {
     font-family:"Quantico";
     src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Quantico:wght@700&display=swap') format('woff');}
-.header{
+header{
     display: block;
     position: fixed;
     z-index: 1;
@@ -22,24 +22,24 @@ body{
     height: fit-content;
     margin: 0;
     background-color: white;}
-.header .logo_sns{
+header .logo_sns{
     display:inline-block;
     width: 100%;
     padding: 0px;
     border-bottom: 1px solid gray;
     margin: 0px;}
-.header .logo_sns #logo{
+header .logo_sns #logo{
     float: left;
     font-size: 30px;
     font-family:'Days';
     color: black;
     text-decoration: none;}
-.header .logo_sns .sns{
+header .logo_sns .sns{
     float: right;}
-.header .logo_sns .sns #symbol{
+header .logo_sns .sns #symbol{
     width: 30px;
     padding: 2px;}
-.header .nav_bar{
+header .nav_bar{
     display: block;
     padding-bottom: 3px;
     border-bottom: 3px solid black;
@@ -47,7 +47,7 @@ body{
     text-align: center;
     list-style: none;
     white-space: nowrap;}
-.header .nav_bar li a{
+header .nav_bar li a{
     display: inline-block;
     position: relative;
     padding: 2px 10px;
@@ -56,9 +56,9 @@ body{
     font-size: 23px;
     color: black;
     text-decoration: none;}
-.header .nav_bar li a.current{
+header .nav_bar li a.current{
     background-color: black; color: white;}
-.header .nav_bar li a::after{
+header .nav_bar li a::after{
     content: "";
     position: absolute;
     left: 50%;
@@ -68,45 +68,44 @@ body{
     transform: translateX(-50%);
     transition: all .3s ease-out;
     background: black;}
-.header .nav_bar li a:hover::after{
+header .nav_bar li a:hover::after{
     width: 95%;}
-.section{
+section{
     display: inline-block;
     width: 100%;
     padding-top: 80px;
     align-items: center;}
-.section .basement .welcome{
+section .basement .welcome{
     font-family: 'Quantico', sans-serif;
     font-size: 40px;
-    font-weight: 700;
-}
-.section .basement div .period{
+    font-weight: 700;}
+section .basement div .period{
     padding: 0;
     margin: 30px;
-    list-style: none;
-}
-.section .basement div .period a{
+    list-style: none;}
+section .basement div .period a{
     text-decoration: none;
-    padding: 3px 8px;
+    padding: 3px 7px;
     border-radius: 20px;
     margin: 0 20px;
     font-family: 'Quantico', sans-serif;
     font-size: 40px;
     font-weight: 700;
+    color: black;
     background-color: #799bd3e8;}
-.section .nav_side{
+section .nav_side{
     position: fixed;
     z-index: 1;
     width: fit-content;
     margin:0px;
     padding: 0px;
     background-color: white;}
-.section .nav_side li{
+section .nav_side li{
     display: inline-block;
     width: fit-content;
-    height: 100%;
+    height: 800px;
     border-right: 1px solid black;}
-.section .nav_side li a{
+section .nav_side li a{
     text-decoration: none;
     color: black;
     font-family:'GnuolaneRg-Regular';
@@ -116,9 +115,9 @@ body{
     margin: 30px 10px 30px 10px;
     font-size: 25px;
     position: relative;}
-.section .nav_side li a.current{
+section .nav_side li a.current{
     background-color: black; color: white;}
-.section .nav_side li a::after{
+section .nav_side li a::after{
     content: "";
     position: absolute;
     bottom: 0px;
@@ -128,60 +127,140 @@ body{
     height: 2px;
     background: black;
     transition: all .3s ease-out;}
-.section .nav_side li a:hover::after{
+section .nav_side li a:hover::after{
     width:40%;}
-.section .body_side{
-    position: relative;
+section .body_side{
     margin: auto;}
-.section .basement{
+section .basement{
     width: 700px;
     height: 100%;
     padding: 50px 100px;
     margin: 50px auto;
     text-align: center;
     background:#F5F2F5;}
-.section .basement .select_box{
+section .basement .slide [name="pos"]{
+    display:none;}
+section .basement .slide{
+    margin: 0 auto;}
+section .basement .slide .frame .pic div img{
+    width: 60%;
+    max-width: 100%;}
+section .basement .slide .frame{
+    white-space: nowrap;
+    font-size: 0;
+    padding: 0;
+    overflow: hidden;}
+section .basement .slide .frame .pic{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    transition: all .35s;}
+section .basement .slide .frame .pic div label{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    cursor: pointer;}
+section .basement .slide .frame .pic div .left{
+    left: 20px;
+    background-image: url(./about_jayce_image/leftarrow.png);
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;}
+section .basement .slide .frame .pic div .right{
+    right: 20px;
+    background-image: url(./about_jayce_image/rightarrow.png);
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;}
+[id="pos1"]:checked~.frame .pic {transform: translateX(0); animation: pos1 12s infinite;}
+[id="pos2"]:checked~.frame .pic {transform: translateX(-100%); animation: pos2 12s infinite;}
+[id="pos3"]:checked~.frame .pic {transform: translateX(-200%); animation: pos3 12s infinite;}
+[id="pos4"]:checked~.frame .pic {transform: translateX(-300%); animation: pos4 12s infinite;}
+@keyframes pos1{
+    0% {left:0%;}
+    23% {left:0%;}
+    25% {left:-100%;}
+    48% {left:-100%;}
+    50% {left:-200%;}
+    73% {left:-200%;}
+    75% {left:-300%;}
+    98% {left:-300%;}
+    100% {left:0%;}}
+@keyframes pos2{
+    0% {left:0%;}
+    23% {left:0%;}
+    25% {left:-100%;}
+    48% {left:-100%;}
+    50% {left:-200%;}
+    73% {left:-200%;}
+    75% {left:100%;}
+    98% {left:100%;}
+    100% {left:0%;}}
+@keyframes pos3{
+    0% {left:0%;}
+    23% {left:0%;}
+    25% {left:-100%;}
+    48% {left:-100%;}
+    50% {left:200%;}
+    73% {left:200%;}
+    75% {left:100%;}
+    98% {left:100%;}
+    100% {left:0%;}}
+@keyframes pos4{
+    0% {left:0%;}
+    23% {left:0%;}
+    25% {left:300%;}
+    48% {left:300%;}
+    50% {left:200%;}
+    73% {left:200%;}
+    75% {left:100%;}
+    98% {left:100%;}
+    100% {left:0%;}}
+section .basement .select_box{
     display: inline-flex;
     padding: 0;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 40px;
     font-weight: 900;}
-.section .basement .select_box .text{
+section .basement .select_box .text{
     line-height: 270px;}
-.section .basement .select_box ul{
+section .basement .select_box ul{
     list-style: none;
     text-align: center;
     width: fit-content;
     padding-left: 14.6px;
     margin: 0;}
-.section .basement .select_box ul li a{
+section .basement .select_box ul li a{
     color: lightgray;
     text-decoration: none;
     transition-property: color;
     transition-duration: 0.4s;}
-.section .basement .select_box ul li a:hover{
+section .basement .select_box ul li a:hover{
     color: #8CA7D4;}
-.section .basement .area_graph{
+section .basement .area_graph{
     margin-top: 50px;
     text-align: left;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 900;}
-.section .basement .area_graph .graph{
+section .basement .area_graph .graph{
     margin: 5px 0 20px 0;
     height: 20px;
     background-color: #ccc ;
     border-radius: 20px ;}
-.section .basement .area_graph .graph span{
+section .basement .area_graph .graph span{
     display: block;
     height: 20px;
     border-radius: 20px;
     background-color: #799bd3e8;}
-.section .basement .area_graph .graph.stack1 span{animation: stack1 2s 1 ease-in}
-.section .basement .area_graph .graph.stack2 span{animation: stack2 2s 1 ease-in}
-.section .basement .area_graph .graph.stack3 span{animation: stack3 2s 1 ease-in}
-.section .basement .area_graph .graph.stack4 span{animation: stack4 2s 1 ease-in}
-.section .basement .area_graph .graph.stack5 span{animation: stack5 2s 1 ease-in}
-.section .basement .area_graph .graph.stack6 span{animation: stack6 2s 1 ease-in}
+section .basement .area_graph .graph.stack1 span{animation: stack1 2s 1 ease-in}
+section .basement .area_graph .graph.stack2 span{animation: stack2 2s 1 ease-in}
+section .basement .area_graph .graph.stack3 span{animation: stack3 2s 1 ease-in}
+section .basement .area_graph .graph.stack4 span{animation: stack4 2s 1 ease-in}
+section .basement .area_graph .graph.stack5 span{animation: stack5 2s 1 ease-in}
+section .basement .area_graph .graph.stack6 span{animation: stack6 2s 1 ease-in}
                                         @keyframes stack1{
                                             0% {width: 0; opacity: 0;}
                                             100% {width: 50%;}}
@@ -200,19 +279,19 @@ body{
                                         @keyframes stack6{
     0% {width: 0; opacity: 0;}
     100% {width: 65%;}}
-.section .basement .warpper{
+section .basement .warpper{
     position: relative;
     width: 700px;
     height: 445px;
     margin-top: 50px;
     box-shadow: 0 1px 4px gray;}
-.section .basement .warpper .stack{
+section .basement .warpper .stack{
     z-index: 1;
     width: 150px;
     padding: 10px;
     border: 5px solid white;
     margin: 20px;}
-.section .basement .warpper .opacity{
+section .basement .warpper .opacity{
     z-index: 0;
     position: absolute;
     width: 150px;
@@ -221,13 +300,13 @@ body{
     margin: 20px;
     background: #799bd3e8;
     opacity: 0;}
-.section .basement .warpper .opacity{opacity: 0.4;}
-.section .basement .warpper .opacity.b1{animation: b1 2s 1 ease-out; height: 20px; bottom: 230px; left: 19.3px;}
-.section .basement .warpper .opacity.b2{animation: b2 2s 1 ease-out; height: 35px; bottom: 230px; left: 245px;}
-.section .basement .warpper .opacity.b3{animation: b3 2s 1 ease-out; height: 40px; bottom: 230px; right: 19.3px;}
-.section .basement .warpper .opacity.b4{animation: b4 2s 1 ease-out; height: 65px; bottom: 6px; left: 19.3px;}
-.section .basement .warpper .opacity.b5{animation: b5 2s 1 ease-out; height: 20px; bottom: 6px; left: 245px;}
-.section .basement .warpper .opacity.b6{animation: b6 2s 1 ease-out; height: 45px; bottom: 6px; right: 19.3px;}
+section .basement .warpper .opacity{opacity: 0.4;}
+section .basement .warpper .opacity.b1{animation: b1 2s 1 ease-out; height: 20px; bottom: 230px; left: 19.3px;}
+section .basement .warpper .opacity.b2{animation: b2 2s 1 ease-out; height: 35px; bottom: 230px; left: 245px;}
+section .basement .warpper .opacity.b3{animation: b3 2s 1 ease-out; height: 40px; bottom: 230px; right: 19.3px;}
+section .basement .warpper .opacity.b4{animation: b4 2s 1 ease-out; height: 65px; bottom: 6px; left: 19.3px;}
+section .basement .warpper .opacity.b5{animation: b5 2s 1 ease-out; height: 20px; bottom: 6px; left: 245px;}
+section .basement .warpper .opacity.b6{animation: b6 2s 1 ease-out; height: 45px; bottom: 6px; right: 19.3px;}
                                         @keyframes b1{
                                             0% {height: 0; opacity: 0;}
                                             100% {height: 20px;}}
