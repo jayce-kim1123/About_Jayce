@@ -109,26 +109,25 @@ body{
 .section .basement{
     display: block;
     width: 700px;
-    height: 80%;
-    padding: 0 100px;
+    height: 100%;
+    padding: 50px 100px;
     margin: auto;
+    text-align: center;
     background:#F5F2F5;}
 .section .basement .select_box{
+    display: inline-flex;
+    padding: 0;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 40px;
-    font-weight: 900;
-    position: relative;
-    left: 20%;
-    display: inline-flex;
-    padding: 50px 0;}
+    font-weight: 900;}
 .section .basement .select_box .text{
     line-height: 270px;}
 .section .basement .select_box ul{
     list-style: none;
-    width:fit-content;
-    padding-left: 30px;
-    margin: 0;
-    text-align: center;}
+    text-align: center;
+    width: fit-content;
+    padding-left: 14.6px;
+    margin: 0;}
 .section .basement .select_box ul li a{
     color: lightgray;
     text-decoration: none;
@@ -136,36 +135,88 @@ body{
     transition-duration: 0.4s;}
 .section .basement .select_box ul li a:hover{
     color: #8CA7D4;}
-.section .basement .graph{
-    margin-bottom: 10px;
+.section .basement .area_graph{
+    margin-top: 50px;
+    text-align: left;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;}
+.section .basement .area_graph .graph{
+    margin: 5px 0 20px 0;
     height: 20px;
     background-color: #ccc ;
     border-radius: 20px ;}
-.section .basement .graph span{
+.section .basement .area_graph .graph span{
     display: block;
     height: 20px;
-    border-radius: 20px;}
-.section .basement .graph.stack1 span{background-color: #799bd3e8; animation: stack1 2s 1 ease-in}
-.section .basement .graph.stack2 span{background-color: #799bd3e8; animation: stack2 2s 1 ease-in}
-.section .basement .graph.stack3 span{background-color: #799bd3e8; animation: stack3 2s 1 ease-in}
-.section .basement .graph.stack4 span{background-color: #799bd3e8; animation: stack4 2s 1 ease-in}
-.section .basement .graph.stack5 span{background-color: #799bd3e8; animation: stack5 2s 1 ease-in}
-.section .basement .graph.stack6 span{background-color: #799bd3e8; animation: stack6 2s 1 ease-in}
-@keyframes stack1{
-    0% {width: 0; opacity: 0;}
-    100% {width: 50%;}}
-@keyframes stack2{
-    0% {width: 0; opacity: 0;}
-    100% {width: 97%;}}
-@keyframes stack3{
-    0% {width: 0; opacity: 0;}
-    100% {width: 83%;}}
-@keyframes stack4{
-    0% {width: 0; opacity: 0;}
-    100% {width: 7%;}}
-@keyframes stack5{
-    0% {width: 0; opacity: 0;}
-    100% {width: 37%;}}
-@keyframes stack6{
+    border-radius: 20px;
+    background-color: #799bd3e8;}
+.section .basement .area_graph .graph.stack1 span{animation: stack1 2s 1 ease-in}
+.section .basement .area_graph .graph.stack2 span{animation: stack2 2s 1 ease-in}
+.section .basement .area_graph .graph.stack3 span{animation: stack3 2s 1 ease-in}
+.section .basement .area_graph .graph.stack4 span{animation: stack4 2s 1 ease-in}
+.section .basement .area_graph .graph.stack5 span{animation: stack5 2s 1 ease-in}
+.section .basement .area_graph .graph.stack6 span{animation: stack6 2s 1 ease-in}
+                                        @keyframes stack1{
+                                            0% {width: 0; opacity: 0;}
+                                            100% {width: 50%;}}
+                                        @keyframes stack2{
+                                            0% {width: 0; opacity: 0;}
+                                            100% {width: 97%;}}
+                                        @keyframes stack3{
+                                            0% {width: 0; opacity: 0;}
+                                            100% {width: 83%;}}
+                                        @keyframes stack4{
+                                            0% {width: 0; opacity: 0;}
+                                            100% {width: 7%;}}
+                                        @keyframes stack5{
+                                            0% {width: 0; opacity: 0;}
+                                            100% {width: 37%;}}
+                                        @keyframes stack6{
     0% {width: 0; opacity: 0;}
     100% {width: 65%;}}
+.section .basement .warpper{
+    position: relative;
+    width: 700px;
+    height: 445px;
+    margin-top: 50px;
+    box-shadow: 0 1px 4px gray;}
+.section .basement .warpper .stack{
+    z-index: 1;
+    width: 150px;
+    padding: 10px;
+    border: 5px solid white;
+    margin: 20px;}
+.section .basement .warpper .opacity{
+    z-index: 0;
+    position: absolute;
+    width: 150px;
+    padding: 10px;
+    border: 6px;
+    margin: 20px;
+    background: #799bd3e8;
+    opacity: 0;}
+.section .basement .warpper .opacity{opacity: 0.4;}
+.section .basement .warpper .opacity.b1{animation: b1 2s 1 ease-out; height: 20px; bottom: 230px; left: 19.3px;}
+.section .basement .warpper .opacity.b2{animation: b2 2s 1 ease-out; height: 35px; bottom: 230px; left: 245px;}
+.section .basement .warpper .opacity.b3{animation: b3 2s 1 ease-out; height: 40px; bottom: 230px; right: 19.3px;}
+.section .basement .warpper .opacity.b4{animation: b4 2s 1 ease-out; height: 65px; bottom: 6px; left: 19.3px;}
+.section .basement .warpper .opacity.b5{animation: b5 2s 1 ease-out; height: 20px; bottom: 6px; left: 245px;}
+.section .basement .warpper .opacity.b6{animation: b6 2s 1 ease-out; height: 45px; bottom: 6px; right: 19.3px;}
+                                        @keyframes b1{
+                                            0% {height: 0; opacity: 0;}
+                                            100% {height: 20px;}}
+                                        @keyframes b2{
+                                            0% {height: 0; opacity: 0;}
+                                            100% {height: 35px;}}
+                                        @keyframes b3{
+                                            0% {height: 0; opacity: 0;}
+                                            100% {height: 40px;}}
+                                        @keyframes b4{
+                                            0% {height: 0; opacity: 0;}
+                                            100% {height: 65px;}}
+                                        @keyframes b5{
+                                            0% {height: 0; opacity: 0;}
+                                            100% {height: 20px;}}
+                                        @keyframes b6{
+    0% {height: 0; opacity: 0;}
+    100% {height: 45px;}}
