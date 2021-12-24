@@ -4,13 +4,16 @@ body{
     margin: auto;
     color: black;
     background-color: white;}
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Quantico:wght@700&display=swap');
 @font-face {
     font-family:"Days";
     src: url('about_jayce_font/Days.woff') format('woff');}
 @font-face {
     font-family:"GnuolaneRg-Regular";
     src: url('./about_jayce_font/GnuolaneRg-Regular.woff') format('woff');}
+@font-face {
+    font-family:"Quantico";
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Quantico:wght@700&display=swap') format('woff');}
 .header{
     display: block;
     position: fixed;
@@ -70,19 +73,40 @@ body{
 .section{
     display: inline-block;
     width: 100%;
-    padding-top: 93px;
+    padding-top: 80px;
     align-items: center;}
-.section .section_nav .nav_side{
-    display: block;
+.section .basement .welcome{
+    font-family: 'Quantico', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+.section .basement div .period{
+    padding: 0;
+    margin: 30px;
+    list-style: none;
+}
+.section .basement div .period a{
+    text-decoration: none;
+    padding: 3px 8px;
+    border-radius: 20px;
+    margin: 0 20px;
+    font-family: 'Quantico', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    background-color: #799bd3e8;}
+.section .nav_side{
+    position: fixed;
+    z-index: 1;
     width: fit-content;
-    margin: 0px;
-    padding: 0px;}
-.section .section_nav .nav_side li{
+    margin:0px;
+    padding: 0px;
+    background-color: white;}
+.section .nav_side li{
     display: inline-block;
     width: fit-content;
-    padding-bottom: 80%;
+    height: 100%;
     border-right: 1px solid black;}
-.section .section_nav .nav_side li a{
+.section .nav_side li a{
     text-decoration: none;
     color: black;
     font-family:'GnuolaneRg-Regular';
@@ -92,9 +116,9 @@ body{
     margin: 30px 10px 30px 10px;
     font-size: 25px;
     position: relative;}
-.section .section_nav .nav_side li a.current{
+.section .nav_side li a.current{
     background-color: black; color: white;}
-.section .section_nav .nav_side li a::after{
+.section .nav_side li a::after{
     content: "";
     position: absolute;
     bottom: 0px;
@@ -104,14 +128,16 @@ body{
     height: 2px;
     background: black;
     transition: all .3s ease-out;}
-.section .section_nav .nav_side li a:hover::after{
+.section .nav_side li a:hover::after{
     width:40%;}
+.section .body_side{
+    position: relative;
+    margin: auto;}
 .section .basement{
-    display: block;
     width: 700px;
     height: 100%;
     padding: 50px 100px;
-    margin: auto;
+    margin: 50px auto;
     text-align: center;
     background:#F5F2F5;}
 .section .basement .select_box{
