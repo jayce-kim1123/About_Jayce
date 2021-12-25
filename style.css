@@ -1,3 +1,7 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 body{
     width: 99%;
     padding: 0px;
@@ -74,32 +78,11 @@ section{
     padding-top: 80px;
     align-items: center;}
 section .basement{
-    width: 700px;
+    width: 1000px;
     height: 100%;
     padding: 20px 100px;
-    margin: 50px auto;
+    margin: 0px auto;
     text-align: center;}
-section .basement .welcome{
-    line-height: 40px;
-    letter-spacing: -2px;
-    font-family: 'Quantico', sans-serif;
-    font-size: 55px;
-    font-weight: 700;}
-section .basement div .period{
-    padding: 0;
-    margin: 70px auto;
-    list-style: none;}
-section .basement div .period a{
-    display: inline-block;
-    text-decoration: none;
-    border-radius: 20px;
-    margin: 0 20px;
-    font-family: 'Quantico', sans-serif;
-    font-size: 40px;
-    font-weight: 700;
-    color: black;
-    background-color: #799bd3e8;}
-section .basement div .period .period_btn{width: 200px;}
 section .nav_side{
     position: fixed;
     z-index: 1;
@@ -109,9 +92,7 @@ section .nav_side{
     background-color: white;}
 section .nav_side li{
     display: inline-block;
-    width: fit-content;
-    height: 800px;
-    border-right: 1px solid black;}
+    width: fit-content;}
 section .nav_side li a{
     text-decoration: none;
     color: black;
@@ -136,20 +117,22 @@ section .nav_side li a::after{
     transition: all .3s ease-out;}
 section .nav_side li a:hover::after{
     width:40%;}
-section .body_side{
+section{
     margin: auto;}
 section .basement .slide [name="pos"]{
     display:none;}
 section .basement .slide{
     margin: 0 auto;}
+section .basement .slide .frame{
+    white-space: nowrap;
+    width: 700px;
+    padding: 0;
+    margin: auto;
+    font-size: 0;
+    overflow: hidden;}
 section .basement .slide .frame .pic div img{
     width: 60%;
     max-width: 100%;}
-section .basement .slide .frame{
-    white-space: nowrap;
-    font-size: 0;
-    padding: 0;
-    overflow: hidden;}
 section .basement .slide .frame .pic{
     position: relative;
     display: inline-block;
@@ -220,13 +203,25 @@ section .basement .slide .frame .pic div .right{
     98% {left:100%;}
     100% {left:0%;}}
 section .basement .text_was{
-    font-size: 20px;
-    font-family: 'Noto Sans KR', sans-serif;
-}
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: 'Noto Sans KR', sans-serif;}
+section .basement .text_was ul{
+    list-style: none;
+    margin: auto;
+    width: 450px;}
+section .basement .text_was ul li{
+    display: inline-flex;
+    padding: 3px 10px;
+    margin: 10px 7px;
+    border-radius: 20px;
+    font-size: 17px;
+    background-color: lightgray;}
 section .basement .select_box{
     display: inline-flex;
     padding: 0;
     margin-left: 50px;
+    margin-bottom: 50px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 55px;
     font-weight: 900;}
@@ -246,10 +241,11 @@ section .basement .select_box ul li a{
 section .basement .select_box ul li a:hover{
     color: #8CA7D4;}
 section .basement .area_graph{
-    margin-top: 50px;
+    width: 700px;
+    margin: 50px auto;
     text-align: left;
     font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 900;}
+    font-weight: 500;}
 section .basement .area_graph .graph{
     margin: 5px 0 20px 0;
     height: 20px;
@@ -288,7 +284,7 @@ section .basement .warpper{
     position: relative;
     width: 700px;
     height: 445px;
-    margin-top: 50px;
+    margin: 50px auto;
     box-shadow: 0 1px 4px gray;}
 section .basement .warpper .stack{
     z-index: 1;
@@ -297,7 +293,7 @@ section .basement .warpper .stack{
     border: 5px solid white;
     margin: 20px;}
 section .basement .warpper .opacity{
-    z-index: 0;
+    z-index: -1;
     position: absolute;
     width: 150px;
     padding: 10px;
@@ -305,7 +301,7 @@ section .basement .warpper .opacity{
     margin: 20px;
     background: #799bd3e8;
     opacity: 0;}
-section .basement .warpper .opacity{opacity: 0.4;}
+section .basement .warpper .opacity{opacity: 0.7;}
 section .basement .warpper .opacity.b1{animation: b1 2s 1 ease-out; height: 20px; bottom: 230px; left: 19.3px;}
 section .basement .warpper .opacity.b2{animation: b2 2s 1 ease-out; height: 35px; bottom: 230px; left: 245px;}
 section .basement .warpper .opacity.b3{animation: b3 2s 1 ease-out; height: 40px; bottom: 230px; right: 19.3px;}
@@ -330,3 +326,66 @@ section .basement .warpper .opacity.b6{animation: b6 2s 1 ease-out; height: 45px
                                         @keyframes b6{
     0% {height: 0; opacity: 0;}
     100% {height: 45px;}}
+section .basement img{
+    width: 800px;}
+section .basement .profile_cats{
+    display: block;
+    height: 500px;
+    margin: auto;
+    align-items: center;
+    width: 810px;}
+section .basement .profile_cats .profile{
+    float: left;
+    width: 400px;
+    height: 200px;
+    padding: 10px 0;
+    border: 0.5px solid black;
+    margin: 0px ;
+    font-size: 15px;
+    font-family: 'Noto Sans KR', sans-serif;}
+section .basement .cube{
+    position: relative;
+    top: 160px;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    animation : spin 15s infinite linear;
+    transform-style: preserve-3d;}
+section .basement .cube div{
+    position: absolute;
+    display: inline;
+    height: 500px;
+    width: 500px;
+    padding: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: gray;
+    border: 1px solid gray;}
+section .basement .cube .c1{transform: rotateX(90deg)  translateZ(270px); background-color: whitesmoke;}
+section .basement .cube .c2{transform: rotateX(0deg)   translateZ(270px); background-color: whitesmoke;}
+section .basement .cube .c3{transform: rotateY(90deg)  translateZ(270px); background-color: whitesmoke;}
+section .basement .cube .c4{transform: rotateY(180deg) translateZ(270px); background-color: whitesmoke;}
+section .basement .cube .c5{transform: rotateY(-90deg) translateZ(270px); background-color: whitesmoke;}
+section .basement .cube .c6{transform: rotateX(-90deg) translateZ(270px); background-color: whitesmoke;}
+@keyframes spin{
+    from{transform: rotateY(0)       rotateX(3deg);}
+    to  {transform: rotateY(-360deg) rotateX(3deg);}}
+section .basement .cube .im{float: left;}
+section .basement .cube .X{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    left: 0;
+    top: 0;
+    font-size: 70px;
+    color: #375FA1;
+    text-align: center;
+    transform: translateY(35%);}
+section .basement .cube .man{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    float: right; }
