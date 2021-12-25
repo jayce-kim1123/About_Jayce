@@ -4,20 +4,16 @@ body{
     margin: auto;
     color: black;
     background-color: white;}
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Quantico:wght@700&display=swap');
 @font-face {
     font-family:"Days";
     src: url('about_jayce_font/Days.woff') format('woff');}
 @font-face {
     font-family:"GnuolaneRg-Regular";
     src: url('./about_jayce_font/GnuolaneRg-Regular.woff') format('woff');}
-@font-face {
-    font-family:"Quantico";
-    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Quantico:wght@700&display=swap') format('woff');}
 header{
     display: block;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     width: 99%;
     height: fit-content;
     margin: 0;
@@ -31,7 +27,8 @@ header .logo_sns{
 header .logo_sns #logo{
     float: left;
     font-size: 30px;
-    font-family:'Days';
+    font-family:'Quantico', sans-serif;
+    letter-spacing: -1px;
     color: black;
     text-decoration: none;}
 header .logo_sns .sns{
@@ -50,7 +47,8 @@ header .nav_bar{
 header .nav_bar li a{
     display: inline-block;
     position: relative;
-    padding: 2px 10px;
+    width: 80px;
+    padding: 2px 0;
     margin: 0px 70px;
     font-family:'GnuolaneRg-Regular';
     font-size: 23px;
@@ -75,17 +73,25 @@ section{
     width: 100%;
     padding-top: 80px;
     align-items: center;}
+section .basement{
+    width: 700px;
+    height: 100%;
+    padding: 20px 100px;
+    margin: 50px auto;
+    text-align: center;}
 section .basement .welcome{
+    line-height: 40px;
+    letter-spacing: -2px;
     font-family: 'Quantico', sans-serif;
-    font-size: 40px;
+    font-size: 55px;
     font-weight: 700;}
 section .basement div .period{
     padding: 0;
-    margin: 30px;
+    margin: 70px auto;
     list-style: none;}
 section .basement div .period a{
+    display: inline-block;
     text-decoration: none;
-    padding: 3px 7px;
     border-radius: 20px;
     margin: 0 20px;
     font-family: 'Quantico', sans-serif;
@@ -93,6 +99,7 @@ section .basement div .period a{
     font-weight: 700;
     color: black;
     background-color: #799bd3e8;}
+section .basement div .period .period_btn{width: 200px;}
 section .nav_side{
     position: fixed;
     z-index: 1;
@@ -131,13 +138,6 @@ section .nav_side li a:hover::after{
     width:40%;}
 section .body_side{
     margin: auto;}
-section .basement{
-    width: 700px;
-    height: 100%;
-    padding: 50px 100px;
-    margin: 50px auto;
-    text-align: center;
-    background:#F5F2F5;}
 section .basement .slide [name="pos"]{
     display:none;}
 section .basement .slide{
@@ -179,7 +179,7 @@ section .basement .slide .frame .pic div .right{
 [id="pos2"]:checked~.frame .pic {transform: translateX(-100%); animation: pos2 12s infinite;}
 [id="pos3"]:checked~.frame .pic {transform: translateX(-200%); animation: pos3 12s infinite;}
 [id="pos4"]:checked~.frame .pic {transform: translateX(-300%); animation: pos4 12s infinite;}
-@keyframes pos1{
+                                        @keyframes pos1{
     0% {left:0%;}
     23% {left:0%;}
     25% {left:-100%;}
@@ -189,7 +189,7 @@ section .basement .slide .frame .pic div .right{
     75% {left:-300%;}
     98% {left:-300%;}
     100% {left:0%;}}
-@keyframes pos2{
+                                        @keyframes pos2{
     0% {left:0%;}
     23% {left:0%;}
     25% {left:-100%;}
@@ -199,7 +199,7 @@ section .basement .slide .frame .pic div .right{
     75% {left:100%;}
     98% {left:100%;}
     100% {left:0%;}}
-@keyframes pos3{
+                                        @keyframes pos3{
     0% {left:0%;}
     23% {left:0%;}
     25% {left:-100%;}
@@ -209,7 +209,7 @@ section .basement .slide .frame .pic div .right{
     75% {left:100%;}
     98% {left:100%;}
     100% {left:0%;}}
-@keyframes pos4{
+                                        @keyframes pos4{
     0% {left:0%;}
     23% {left:0%;}
     25% {left:300%;}
@@ -219,19 +219,24 @@ section .basement .slide .frame .pic div .right{
     75% {left:100%;}
     98% {left:100%;}
     100% {left:0%;}}
+section .basement .text_was{
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
 section .basement .select_box{
     display: inline-flex;
     padding: 0;
+    margin-left: 50px;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 40px;
+    font-size: 55px;
     font-weight: 900;}
 section .basement .select_box .text{
-    line-height: 270px;}
+    line-height: 400px;}
 section .basement .select_box ul{
     list-style: none;
     text-align: center;
     width: fit-content;
-    padding-left: 14.6px;
+    padding: 0;
     margin: 0;}
 section .basement .select_box ul li a{
     color: lightgray;

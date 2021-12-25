@@ -1,49 +1,45 @@
 <!doctype html>
 <html>
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Quantico:wght@700&display=swap" rel="stylesheet">
     <title>Hi, im jayce :)</title>
     <meta charset="utf-8">
-<link rel="stylesheet" href="./style.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 50%;
+            background-color: black;
+            color: white;
+        }
+        section .welcome{
+            position: absolute;
+            top: 25%;
+            text-align: center;
+            line-height: 90px;
+            letter-spacing: -2px;
+            font-family: 'Quantico', sans-serif;
+            font-size: 65px;
+            font-weight: 700;}
+        section .welcome a{
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo_sns">
-            <a id="logo" href="index.html">About Jayce</a>
-            <div class="sns">
-                <img id="symbol" src="./about_jayce_image/phone.png" title="Phone" onclick="alert('010-guess-what')">
-                <a href="https://github.com/jayce-kim1123" target="_blank" title="github"><img id="symbol" src="./about_jayce_image\github.png""></a>
-                <a href="https://velog.io/@jayce_kim" target="_blank" title="velog"><img id="symbol" src="./about_jayce_image\blogger.png""></a>
-                <a href="https://www.instagram.com/jayce_k_777/" target="_blank" title="instagram"><img id="symbol" src="./about_jayce_image\instagram.png""></a>
-                <img id="symbol" src="./about_jayce_image\mail.png" title="e-mail" onclick="alert('kimjisung777@gmail.com')">
-            </div>
-        </div>
-        <div class="nav_bar">
-            <li>
-                <a href="./i was/a_car_mech.html">I was</a>
-                <a href="./i am/char.html">I am</a>
-                <a href="./i will be/i will be.html">I will be</a>
-            </li>
-        </div>
-    </header>
     <section>
-        <div class="basement">
-            <img src="#" alt="">
-            <div class="welcome">
-                welcome, i'm jayce!<br><br>
-                you wanna know about me?<br><br>
-                then, pick up the period
-            </div>
+        <div class="welcome">
+            welcome, stranger!<br>
+            i'm jayce!<br>
+            you wanna know about me?<br><br>
             <div>
-                <li class="period">
-                    <a href="./i was/a_car_mech.html" title="The Past is behind, learn from it">PAST</a>
-                    <a href="./i am/char.html" title="The Present is here, live it">PRESENT</a>
-                    <a href="./i will be/i will be.html" title="The Future is ahead, prepare for it">FUTURE</a>
-                </li>
+                <a href="./i was/a_car_mech.html">YES</a> / 
+                <a href="./i was/a_car_mech.html" onclick="alert('NOPE, i think you must see')">NO</a>
             </div>
         </div>
     </section>
-    <footer>
-
-    </footer>
 </body>
 </html>
